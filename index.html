@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090909">
+  <title>Chapter 19 | Haikal Devin Prayata</title>
+  <link rel="stylesheet" href="25.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <button class="brand" onclick="goHome()">for you <span>✧</span></button>
+    <span class="nav-date">25 . 10 . 2026</span>
+  </header>
+
+  <main>
+    <!-- HALAMAN PEMBUKA -->
+    <section id="home" class="hero">
+      <div class="sparkle">✧ · ˚　✦　˚ · ✧</div>
+      <p class="eyebrow">A LITTLE SURPRISE FOR SOMEONE SPECIAL</p>
+
+      <div class="birthday-number">19</div>
+
+      <p class="chapter">A NEW CHAPTER BEGINS</p>
+
+      <h1>Happy Birthday,<br>
+        <span>Haikal Devin Prayata.</span>
+      </h1>
+
+      <p class="hero-text">
+        A little corner of the internet,<br>
+        made to celebrate you and your special day.
+      </p>
+
+      <p class="hero-date">25 OCTOBER 2026</p>
+
+      <button class="primary-btn" onclick="showPage('menu')">
+        Open Your Surprise <span>✧</span>
+      </button>
+
+      <p class="hint">there's a little something waiting for you...</p>
+    </section>
+
+    <!-- MENU UTAMA -->
+    <section id="menu" class="page">
+      <div class="section-heading">
+        <p class="eyebrow">MADE JUST FOR YOU</p>
+        <h2>A little box of surprises.</h2>
+        <p>Choose any box you want to open.</p>
+      </div>
+
+      <div class="menu-grid">
+        <button class="menu-card" onclick="showPage('messages')">
+          <span class="card-number">01 /✧</span>
+          <span class="card-icon">✉</span>
+          <b>19 Messages for You</b>
+          <small>one for every year</small>
+          <span class="card-arrow">↗</span>
+        </button>
+
+        <button class="menu-card" onclick="showPage('openwhen')">
+          <span class="card-number">02 / ☾</span>
+          <span class="card-icon">☁</span>
+          <b>Open When...</b>
+          <small>for different kinds of days</small>
+          <span class="card-arrow">↗</span>
+        </button>
+
+        <button class="menu-card" onclick="showPage('wishes')">
+          <span class="card-number">03 / ✧</span>
+          <span class="card-icon">☆</span>
+          <b>Birthday Wishes</b>
+          <small>things I wish for you</small>
+          <span class="card-arrow">↗</span>
+        </button>
+
+        <button class="menu-card" onclick="showPage('letter')">
+          <span class="card-number">04 / ☆</span>
+          <span class="card-icon">⌑</span>
+          <b>A Little Letter</b>
+          <small>a note from me to you</small>
+          <span class="card-arrow">↗</span>
+        </button>
+
+        <button class="menu-card" onclick="showPage('littlethings')">
+          <span class="card-number">05 / ✦</span>
+          <span class="card-icon">✧</span>
+          <b>Little Things for You</b>
+          <small>little reminders to keep</small>
+          <span class="card-arrow">↗</span>
+        </button>
+
+        <button class="menu-card" onclick="showPage('quiz')">
+          <span class="card-number">06 / ?</span>
+          <span class="card-icon">♧</span>
+          <b>Little Quiz</b>
+          <small>a tiny birthday game</small>
+          <span class="card-arrow">↗</span>
+        </button>
+
+        <button class="menu-card menu-wide" onclick="showPage('song')">
+          <span class="card-number">07 / ♫</span>
+          <span class="card-icon">♫</span>
+          <b>A Song for You</b>
+          <small>a little soundtrack for your day</small>
+          <span class="card-arrow">↗</span>
+        </button>
+      </div>
+
+      <p class="menu-note">take your time exploring everything !!</p>
+    </section>
+
+    <!-- MENU 1: 19 PESAN -->
+    <section id="messages" class="page">
+      <button class="back-link" onclick="showPage('menu')">← back to surprises</button>
+
+      <div class="section-heading">
+        <p class="eyebrow">01 / A MESSAGE FOR EVERY YEAR</p>
+        <h2>19 Messages for You.</h2>
+        <p>Tap a card and see what's inside.</p>
+      </div>
+
+      <div id="messageGrid" class="message-grid"></div>
+      <p id="messageProgress" class="progress-text">0 of 19 messages opened ♡</p>
+    </section>
+
+    <!-- MENU 2: OPEN WHEN -->
+    <section id="openwhen" class="page">
+      <button class="back-link" onclick="showPage('menu')">← back to surprises</button>
+
+      <div class="section-heading">
+        <p class="eyebrow">02 / OPEN WHEN...</p>
+        <h2>For whatever kind of day.</h2>
+        <p>Choose the little letter you need today.</p>
+      </div>
+
+      <div class="letter-options">
+        <button class="letter-option" onclick="openWhen(0)">
+          <span>01</span><b>When you're tired</b><span>↗</span>
+        </button>
+        <button class="letter-option" onclick="openWhen(1)">
+          <span>02</span><b>When you can't sleep</b><span>↗</span>
+        </button>
+        <button class="letter-option" onclick="openWhen(2)">
+          <span>03</span><b>When you need motivation</b><span>↗</span>
+        </button>
+        <button class="letter-option" onclick="openWhen(3)">
+          <span>04</span><b>When you're having a bad day</b><span>↗</span>
+        </button>
+        <button class="letter-option" onclick="openWhen(4)">
+          <span>05</span><b>When you need a smile</b><span>↗</span>
+        </button>
+      </div>
+
+      <div id="whenResult" class="paper result-paper">
+        <span class="paper-label">A LITTLE NOTE ✦</span>
+        <h3>Choose a letter.</h3>
+        <p>Your message will appear here.</p>
+      </div>
+    </section>
+
+    <!-- MENU 3: BIRTHDAY WISHES -->
+    <section id="wishes" class="page">
+      <button class="back-link" onclick="showPage('menu')">← back to surprises</button>
+
+      <div class="section-heading">
+        <p class="eyebrow">03 / BIRTHDAY WISHES</p>
+        <h2>Dear ka haikal,</h2>
+        <p>Some things I hope life gives you.</p>
+      </div>
+
+      <div class="paper wishes-paper">
+        <p class="paper-label">A WISH FOR YOUR CHAPTER 19</p>
+
+        <p>✦ Semoga kamu selalu diberi kesehatan dan hati yang tenang.</p>
+        <p>✦ Semoga setiap urusan kamu dimudahkan, termasuk sekolah, PKL, dan rencana masa depan.</p>
+        <p>✦ Semoga usaha yang selama ini kamu lakukan membuahkan hasil yang baik.</p>
+        <p>✦ Semoga kamu dikelilingi orang-orang yang tulus dan menghargai kamu.</p>
+        <p>✦ Semoga kamu punya lebih banyak alasan untuk tertawa dan bahagia.</p>
+        <p>✦ Semoga kamu tetap kuat saat menghadapi hari yang sulit.</p>
+        <p>✦ Semoga hal-hal yang kamu doakan bisa terwujud satu per satu.</p>
+
+        <div class="wish-ending">
+          <span>✧</span>
+          <p>May 19 be a year of growth, happiness, and beautiful new beginnings.</p>
+          <span>♡</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU 4: SURAT -->
+    <section id="letter" class="page">
+      <button class="back-link" onclick="showPage('menu')">← back to surprises</button>
+
+      <div class="section-heading">
+        <p class="eyebrow">04 / A LITTLE LETTER</p>
+        <h2>A note from me to you.</h2>
+        <p>A little something I wanted you to read.</p>
+      </div>
+
+      <div class="envelope">
+        <div class="envelope-top">TO: HAIKAL DEVIN PRAYATA</div>
+        <div class="paper letter-paper">
+          <p>Hi, Ka kakk!! ✦</p>
+
+          <p>Happy birthday yaa! Hehe,cie makin tua ajaa hhe.</p>
+
+          <p>Semoga di umur yang baru ini, banyak hal baik datang ke hidup kamu. Semoga apa pun yang lagi kamu usahakan bisa berjalan lancar dan keinginan kamu bisa tercapai satu per satu.</p>
+
+          <p>Jangan lupa jaga kesehatan, makan teratur, dan istirahat kalau capek. Kamu nggak harus selalu produktif setiap saat, kok. Sesekali istirahat juga penting.</p>
+
+          <p>I'm glad I got to know you. Semoga hari ini jadi hari yang menyenangkan buat kamu dan ada banyak hal kecil yang bikin kamu senyum.</p>
+
+          <p>Enjoy your special day, Ka! Semoga tahun ini jadi chapter yang baik buat kamu. Happy 19th birthday sekali lagi. ♡</p>
+
+          <div class="letter-signature">
+            with care,<br>
+            <span>someone wishing you the best ✦</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU 5: LITTLE THINGS -->
+    <section id="littlethings" class="page">
+      <button class="back-link" onclick="showPage('menu')">← back to surprises</button>
+
+      <div class="section-heading">
+        <p class="eyebrow">05 / LITTLE THINGS FOR YOU</p>
+        <h2>Just a few little reminders.</h2>
+        <p>Small things that might make your day a little better.</p>
+      </div>
+
+      <div class="things-grid">
+        <div class="thing-card">
+          <span>✧ A WISH</span>
+          <p>Semoga selalu ada alasan buat kamu tersenyum hari ini.</p>
+        </div>
+        <div class="thing-card">
+          <span>♡ A REMINDER</span>
+          <p>Don't forget to take care of yourself, too.</p>
+        </div>
+        <div class="thing-card">
+          <span>☾ A LITTLE NOTE</span>
+          <p>It's okay to rest. You don't have to rush everything.</p>
+        </div>
+        <div class="thing-card">
+          <span>✦ A HOPE</span>
+          <p>Semoga hal-hal yang kamu impikan tercapai satu per satu.</p>
+        </div>
+        <div class="thing-card">
+          <span>☁ A SOFT REMINDER</span>
+          <p>Jangan terlalu keras sama diri sendiri, Ka. Do your best.</p>
+        </div>
+        <div class="thing-card">
+          <span>✦ A LITTLE PRAYER</span>
+          <p>Semoga kamu selalu diberi kemudahan dalam setiap langkah.</p>
+        </div>
+        <div class="thing-card special-thing">
+          <span>ONE LAST THING ♡</span>
+          <p>I'm glad I got to know you, kak. I hope your 19th year brings you many beautiful reasons to smile.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU 6: QUIZ -->
+    <section id="quiz" class="page">
+      <button class="back-link" onclick="showPage('menu')">← back to surprises</button>
+
+      <div class="section-heading">
+        <p class="eyebrow">06 / LITTLE QUIZ</p>
+        <h2>A tiny birthday game.</h2>
+        <p>Let's see if you know your birthday facts!</p>
+      </div>
+
+      <div class="quiz-card">
+        <span class="quiz-count" id="quizCount">QUESTION 01 / 03</span>
+        <h3 id="quizQuestion">How old are you turning today?</h3>
+        <div id="quizOptions" class="quiz-options"></div>
+        <p id="quizFeedback" class="quiz-feedback" aria-live="polite"></p>
+        <button id="nextQuestion" class="primary-btn" onclick="nextQuiz()" hidden>
+          Next Question →
+        </button>
+        <button id="restartQuiz" class="outline-btn" onclick="restartQuiz()" hidden>
+          Play Again ↻
+        </button>
+      </div>
+    </section>
+
+    <!-- MENU 7: A SONG FOR YOU -->
+<section id="song" class="page">
+  <button class="back-link" onclick="showPage('menu')">
+    ← back to surprises
+  </button>
+
+  <div class="section-heading">
+    <p class="eyebrow">07 / PLAY A LITTLE MUSIC</p>
+    <h2>A Song for You ✦</h2>
+    <p>Two songs for your special day. Choose one and press play.</p>
+  </div>
+
+  <div class="song-box">
+    <h3>01. Garis Terdepan</h3>
+    <p class="artist">Fiersa Besari</p>
+
+    <iframe
+      src="https://open.spotify.com/embed/track/6JNoIVtIVFTKTwEMk5uHGh?utm_source=generator"
+      width="100%"
+      height="152"
+      frameborder="0"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"
+      title="Garis Terdepan - Bruno Mars">
+    </iframe>
+  </div>
+
+  <div class="song-box">
+    <h3>02.Count on ME </h3>
+    <p class="artist">Bruno Mars</p>
+
+    <iframe
+      src="https://open.spotify.com/embed/track/7l1qvxWjxcKpB9PCtBuTbU?si=DPsf6HiITUaITU0gFWsU6A&utm_source=copy-link"
+      width="100%"
+      height="152"
+      frameborder="0"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"
+      title="Count on ME - Bruno Mars">
+    </iframe>
+  </div>
+
+  <p class="song-footer">A little music, just for you. ✦</p>
+</section>
+
+  </main>
+
+  <footer>
+    <p>MADE WITH CARE, JUST FOR YOU/p>
+    <span>H.D.P. · CHAPTER 19 · 25.10.2026</span>
+  </footer>
+
+  <!-- POP-UP PESAN -->
+  <div id="messageModal" class="modal"
+       role="dialog" aria-modal="true"
+       aria-labelledby="modalTitle"
+       onclick="closeModal(event)">
+    <div class="modal-content">
+      <button class="close-btn" onclick="hideModal()" aria-label="Close">×</button>
+      <p class="eyebrow">A MESSAGE FOR YOU </p>
+      <span id="modalNumber" class="modal-number">01 / 19</span>
+      <h2 id="modalTitle">A little message</h2>
+      <p id="modalText" class="modal-text"></p>
+      <button class="primary-btn" onclick="hideModal()">Keep this message ♡</button>
+    </div>
+  </div>
+
+  <script>
+    // 19 PESAN ULANG TAHUN
+    const messages = [
+      ["Happy birthday!", "Semoga umur 19 ini jadi awal dari banyak hal baik yang menunggu kamu."],
+      ["Stay healthy ♡", "Jangan lupa jaga kesehatan, makan teratur, dan istirahat yang cukup yaa."],
+      ["Keep smiling", "Semoga selalu ada alasan kecil yang bikin kamu tersenyum setiap hari."],
+      ["Be proud of yourself", "Jangan lupa bangga sama diri sendiri dan semua usaha yang sudah kamu lakukan."],
+      ["Your dreams", "Semoga mimpi-mimpi kamu perlahan berubah jadi sesuatu yang nyata."],
+      ["Take your time", "Kamu nggak harus punya semua jawaban sekarang. Pelan-pelan aja."],
+      ["Good people", "Semoga kamu selalu dikelilingi orang-orang yang tulus dan menghargai kamu."],
+      ["More happiness", "Semoga tahun ini punya lebih banyak cerita yang bikin kamu bahagia."],
+      ["Stay strong", "Kalau ada hari yang berat, semoga kamu selalu menemukan kekuatan untuk melewatinya."],
+      ["Little things", "Semoga kamu bisa menikmati kebahagiaan sederhana yang sering datang tanpa diduga."],
+      ["New adventures", "Semoga ada banyak pengalaman baru yang menyenangkan di umur ini."],
+      ["Believe in yourself", "Jangan terlalu meragukan diri sendiri. Kamu juga punya banyak hal baik dalam dirimu."],
+      ["Your future", "Semoga masa depan yang sedang kamu perjuangkan membawa hasil yang indah."],
+      ["More laughter", "Semoga ada banyak momen random yang bikin kamu ketawa."],
+      ["Peace of mind", "Semoga pikiran kamu lebih tenang dan hati kamu lebih damai."],
+      ["Never give up", "Kalau sesuatu belum berhasil, bukan berarti kamu nggak akan bisa. Coba lagi saat siap."],
+      ["A little reminder", "Kamu juga pantas mendapat kebaikan yang sering kamu berikan kepada orang lain."],
+      ["Thank you", "Makasih yaa udah jadi seseorang yang menyenangkan untuk dikenal."],
+      ["One last wish", "Semoga di umur 19 ini kamu makin bahagia, makin bertumbuh, dan selalu punya alasan untuk bersyukur. Happy birthday, Haikal Devin Prayata!"]
+    ];
+
+    // PESAN OPEN WHEN
+    const whenMessages = [
+      ["When you're tired", "Ka, kalau lagi capek, jangan merasa harus menyelesaikan semuanya sekaligus yaa. Istirahat sebentar juga nggak apa-apa. You deserve a break, too. ♡"],
+      ["When you can't sleep", "Semoga malam ini kamu bisa istirahat dengan tenang. Let the worries wait until tomorrow."],
+      ["When you need motivation", "Ingat, setiap langkah kecil tetap berarti. Kamu nggak harus langsung sampai tujuan. Yang penting tetap berusaha sesuai kemampuanmu."],
+      ["When you're having a bad day", "Nggak semua hari harus berjalan sempurna. Semoga besok ada hal kecil yang bikin hari kamu terasa lebih baik lagi."],
+      ["When you need a smile", "Hehe, kalau kamu lagi butuh alasan buat senyum, anggap aja website kecil ini salah satunya. Semoga kamu senyum pas bacanya. ♡"]
+    ];
+
+    // NAVIGASI ANTAR HALAMAN
+    function showPage(id) {
+      document.querySelectorAll(".hero, .page").forEach(section => {
+        section.style.display = "none";
+      });
+
+      const target = document.getElementById(id);
+      if (!target) return;
+
+      target.style.display = id === "home" ? "block" : "block";
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function goHome() {
+      showPage("home");
+    }
+
+    // MEMBUAT 19 KARTU PESAN
+    const messageGrid = document.getElementById("messageGrid");
+    const openedMessages = new Set();
+
+    messages.forEach((message, index) => {
+      const button = document.createElement("button");
+      button.className = "message-card";
+      button.innerHTML = `
+        <span class="message-index">${String(index + 1).padStart(2, "0")}</span>
+        <span class="message-envelope">✉</span>
+        <b class="message-tap">Tap to open ♡</b>
+      `;
+
+      button.addEventListener("click", () => {
+        openedMessages.add(index);
+        document.getElementById("modalNumber").textContent =
+          String(index + 1).padStart(2, "0") + " / 19";
+        document.getElementById("modalTitle").textContent = message[0];
+        document.getElementById("modalText").textContent = message[1];
+        document.getElementById("messageModal").classList.add("active");
+        document.getElementById("messageProgress").textContent =
+          `${openedMessages.size} of 19 messages opened`;
+      });
+
+      messageGrid.appendChild(button);
+    });
+
+    function hideModal() {
+      document.getElementById("messageModal").classList.remove("active");
+    }
+
+    function closeModal(event) {
+      if (event.target.id === "messageModal") hideModal();
+    }
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") hideModal();
+    });
+
+    // OPEN WHEN
+    function openWhen(index) {
+      const message = whenMessages[index];
+      const result = document.getElementById("whenResult");
+
+      result.innerHTML = `
+        <span class="paper-label">A LITTLE NOTE ♡</span>
+        <h3>${message[0]}</h3>
+        <p></p>
+      `;
+      result.querySelector("p").textContent = message[1];
+      result.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+
+    // MINI QUIZ
+    const quizQuestions = [
+      {
+        question: "How old are you turning today?",
+        options: ["18 years old", "19 years old ♡", "20 years old"],
+        answer: 1
+      },
+      {
+        question: "When is your birthday?",
+        options: ["October 15", "October 25 ♡", "November 25"],
+        answer: 1
+      },
+      {
+        question: "What is this little website for?",
+        options: [
+          "A school assignment",
+          "A random website",
+          "A birthday surprise for you"
+        ],
+        answer: 2
+      }
+    ];
+
+    let quizIndex = 0;
+    let quizScore = 0;
+    let quizAnswered = false;
+
+    function renderQuiz() {
+      const q = quizQuestions[quizIndex];
+      quizAnswered = false;
+
+      document.getElementById("quizCount").textContent =
+        `QUESTION ${String(quizIndex + 1).padStart(2, "0")} / 03`;
+      document.getElementById("quizQuestion").textContent = q.question;
+      document.getElementById("quizFeedback").textContent = "";
+      document.getElementById("nextQuestion").hidden = true;
+      document.getElementById("restartQuiz").hidden = true;
+
+      const options = document.getElementById("quizOptions");
+      options.innerHTML = "";
+
+      q.options.forEach((option, index) => {
+        const button = document.createElement("button");
+        button.textContent = option;
+        button.className = "quiz-option";
+        button.onclick = () => chooseAnswer(index);
+        options.appendChild(button);
+      });
+    }
+
+    function chooseAnswer(index) {
+      if (quizAnswered) return;
+      quizAnswered = true;
+
+      const q = quizQuestions[quizIndex];
+      const buttons = document.querySelectorAll(".quiz-option");
+
+      buttons.forEach((button, i) => {
+        button.disabled = true;
+        if (i === q.answer) button.classList.add("correct");
+        if (i === index && i !== q.answer) button.classList.add("incorrect");
+      });
+
+      const feedback = document.getElementById("quizFeedback");
+
+      if (index === q.answer) {
+        quizScore++;
+        feedback.textContent = "Correct! You got it ♡";
+      } else {
+        feedback.textContent = "Hehe, not quite! The correct answer is highlighted. ♡";
+      }
+
+      if (quizIndex < quizQuestions.length - 1) {
+        document.getElementById("nextQuestion").hidden = false;
+      } else {
+        feedback.textContent += ` Final score: ${quizScore}/3. Happy birthday, Haikal! ♡`;
+        document.getElementById("restartQuiz").hidden = false;
+      }
+    }
+
+    function nextQuiz() {
+      if (quizIndex < quizQuestions.length - 1) {
+        quizIndex++;
+        renderQuiz();
+      }
+    }
+
+    function restartQuiz() {
+      quizIndex = 0;
+      quizScore = 0;
+      renderQuiz();
+    }
+
+    renderQuiz();
+    showPage("home");
+  </script>
+</body>
+</html>
